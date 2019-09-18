@@ -1,11 +1,11 @@
 # How to send email using Node.js?
 
-Nodejs is server side javascript runtime built on chrome v8 engine. Node js allows us to use javascript on server side.
+Nodejs is a server-side javascript runtime built on chrome v8 engine. Node js allows us to use javascript on server side.
 
 We will be using windows 10 machine for this tutorial. Visit 'https://nodejs.org/en/' you will find following options. Right now 10.16.3 stable version available.
 
 ### Prerequisites
-You shoud be having a working windows machine to begin with this tutorial.
+You should be having a working windows machine, to begin with this tutorial.
 
 ### Installation
 ![download button for node js](https://i.imgur.com/usNb657.png)
@@ -18,13 +18,13 @@ You shoud be having a working windows machine to begin with this tutorial.
  
 ![default location](https://i.imgur.com/Ia26o81.png)
 
-- select default location for nodejs (remember this location to verify the insatllation)
+- Select default location for nodejs (remember this location to verify the installation)
 
 ![finish installation](https://i.imgur.com/Guh7hvv.png)
-- click on install and finish the installation.
+- Click on install and finish the installation.
 
 ##### Verify whether nodejs installation:
-- Open nodejs installation directory, which we had selected at the time of installation.  In our case it is C:\Program Files\nodejs. If you dont remember the insatllation directory, just go to c drive and find Program Files. In this directory you should find nodejs directory, as it is default location. Here we will find node js application, just double click it, A command prompt will appear. 
+- Open nodejs installation directory, which we had selected at the time of installation. In our case it is C:\Program Files\nodejs. If you don't remember the installation directory, just go to c drive and find Program Files. In this directory, you should find nodejs directory, as it is the default location. Here we will find node js application, just double click it, A command prompt will appear. 
 
 ![Try basic js in nodejs window](https://i.imgur.com/V3JJTjO.png)
 - Lets try basic javascript to test our nodejs installation.
@@ -33,9 +33,9 @@ var message = `Hello world`
 console.log(message)
 ```
 
-Nodejs comes with NPM. NPM(Node package manager) is the default package manager for Nodejs. Unfortunately Nodejs does not include any preinstalled module or library to send emails. We have to install a third party module like NodeMailer or AlphaMail using NPM.
+Nodejs comes with NPM. NPM(Node package manager) is the default package manager for Nodejs. Unfortunately, Nodejs does not include any preinstalled module or library to send emails. We have to install a third-party module like NodeMailer or AlphaMail using NPM.
 
-- To begin with our project to send email, lets create a folder named send_emails, press shift and right click in the folder. You should have an option 'Open PowerShell Window Here' click on this option. Windows PowerShell will appear.
+- To begin with, our project to send an email, let's create a folder named send_emails, press shift and right-click in the folder. You should have an option 'Open PowerShell Window Here' click on this option. Windows PowerShell will appear.
 
 ![Powershell window](https://i.imgur.com/pI7Hh3J.png)
 
@@ -43,12 +43,12 @@ Nodejs comes with NPM. NPM(Node package manager) is the default package manager 
 
 ![Imgur](https://i.imgur.com/VKzJZd9.png)
 
-- We will use package.json file to install nodemailer from NPM. In powershell window, type following command
+- Create package.json file to install nodemailer from NPM. In powershell window, type following command
 
 ```
 npm init
 ```
- - Add description in prompt, then write mailer.js as entry point file.write your name in author. Press enter to proceed
+ - Add a description in prompt, then write mailer.js as entry point file. Write your name in author. Press enter to proceed
 
 - Now package.json file will be available in the project folder. In powershell window, make sure your powershell working directory is the project folder. Type following command to install nodemailer using NPM.
 
@@ -75,7 +75,7 @@ npm install --save nodemailer
 }
 ```
 
-- Now create a file mailer.js which is entry point mentioned earlier in package.json.
+- Now create a file mailer.js which is the entry point mentioned earlier in package.json.
 
 ![Imgur](https://i.imgur.com/foo8BlX.png)
 
@@ -97,7 +97,7 @@ const nodemailer = require('nodemailer');
 // declare vars,
 let fromMail = 'ghanshyamnetcore@gmail.com';
 let toMail = 'gnbaviskar2@gmail.com';
-let subject  = 'An email using nodejs app';
+let subject = 'An email using nodejs app';
 let text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." 
 ```
 
