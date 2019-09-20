@@ -240,3 +240,8 @@ linux/mac user do it with sudo to install the nodemailer:
 ```
 sudo npm install -g nodemailer
 ```
+- If you are trying to install nodemailer globally using npm, you will get this error. Use sudo with install command to resolve this.
+
+```
+sudo npm install -g nodemailer
+```
