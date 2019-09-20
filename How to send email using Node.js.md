@@ -1,29 +1,37 @@
 # How to send email using Node.js?
 
-Nodejs is a server-side javascript runtime built on chrome v8 engine. Node js allows us to use javascript on server side.
+Nodejs is a server-side javascript runtime environment built on chrome v8 engine. It allows us to use javascript on server side.Currently Nodejs 10.16.3 stable version available.
 
-We will be using windows 10 machine for this tutorial. Visit 'https://nodejs.org/en/' you will find following options. Right now 10.16.3 stable version available.
+Nodejs is cross-platform. It is available for Windows, linux and Mac. I will be using Windows 10 machine for this tutotial.
 
-### Prerequisites
-You should be having a working windows machine, to begin with this tutorial.
-
+## Prerequisites
+ - A working windows 10 machine.
+ - Nodejs libraries installed.
+ - Nodemailer NPM module installed globally.
+  
 ### Installation
-![download button for node js](https://i.imgur.com/usNb657.png)
+(If you have nodejs and nodemailer module installed, you can skip to execution step) 
 
-- Click on this button to download msi installer to install nodejs. Double click on the msi file to start the installer. Like any other installation on windows, we will click next buttons several times
+
+![download button for node js](https://i.imgur.com/usNb657.png)
+1. Install Node Js: Visit https://nodejs.org/en/ to download the NodeJs MSI installer. I am using version 10.16.3 for this tutorial. 
+
+![Imgur](https://i.imgur.com/m60WFNb.png)
+
+2. Double click on the msi file to start the installer, then click 'Run'. Like any other installation on windows, we will click next buttons several times  
 
 ![accept terms](https://i.imgur.com/RfVrQWC.png)
 
-- Read and accept the terms in licence agreement
+3. Read and accept the terms in licence agreement
  
 ![default location](https://i.imgur.com/Ia26o81.png)
 
-- Select default location for nodejs (remember this location to verify the installation)
+4. Select default location for nodejs (remember this location to verify the installation)
 
 ![finish installation](https://i.imgur.com/Guh7hvv.png)
 - Click on install and finish the installation.
 
-##### Verify whether nodejs installation:
+##### Verify nodejs installation working properly:
 - Open nodejs installation directory, which we had selected at the time of installation. In our case it is C:\Program Files\nodejs. If you don't remember the installation directory, just go to c drive and find Program Files. In this directory, you should find nodejs directory, as it is the default location. Here we will find node js application, just double click it, A command prompt will appear. 
 
 ![Try basic js in nodejs window](https://i.imgur.com/V3JJTjO.png)
@@ -32,77 +40,43 @@ You should be having a working windows machine, to begin with this tutorial.
 var message = `Hello world`
 console.log(message)
 ```
+#### Installation Nodemailer module:
+- Nodejs comes with NPM. NPM(Node package manager) is the default package manager for Nodejs. Nodejs does not include any preinstalled module or library to send emails. We have to install a third-party module like NodeMailer or AlphaMail using NPM.
 
-Nodejs comes with NPM. NPM(Node package manager) is the default package manager for Nodejs. Unfortunately, Nodejs does not include any preinstalled module or library to send emails. We have to install a third-party module like NodeMailer or AlphaMail using NPM.
-
-- To begin with, our project to send an email, let's create a folder named send_emails, press shift and right-click in the folder. You should have an option 'Open PowerShell Window Here' click on this option. Windows PowerShell will appear.
-
-![Powershell window](https://i.imgur.com/pI7Hh3J.png)
-
-- Incase you dont find the option to open powershell from this folder, just copy the absolute path of the folder, open powershell from windows start menu and change directory in powershell
-
-![Imgur](https://i.imgur.com/VKzJZd9.png)
-
-- Create package.json file to install nodemailer from NPM. In powershell window, type following command
+- We can install nodemailer globally, to use it in any nodejs project using following npm command.
 
 ```
-npm init
-```
- - Add a description in prompt, then write mailer.js as entry point file. Write your name in author. Press enter to proceed
-
-- Now package.json file will be available in the project folder. In powershell window, make sure your powershell working directory is the project folder. Type following command to install nodemailer using NPM.
-
-```
-npm install --save nodemailer
+npm install -g nodemailer
 ```
 
-- This will add dependecies array to package.json
-
-```
-{
-  "name": "send_emails",
-  "version": "1.0.0",
-  "description": "'A simple app to send emails from nodejs'",
-  "main": "mailer.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "author name",
-  "license": "ISC",
-  "dependencies": {
-    "nodemailer": "*"
-  }
-}
-```
-
-- Now create a file mailer.js which is the entry point mentioned earlier in package.json.
+### Execution
 
 ![Imgur](https://i.imgur.com/foo8BlX.png)
 
-- To send email using gmail as service from third party apps like our nodejs app, we have to enable 'Allow less secure apps' in gmail. Login in your gmail account and visit "https://myaccount.google.com/lesssecureapps" and enable the 'Allow less secure apps'
+1. To send email using gmail as service from third party apps like our nodejs app, we have to enable 'Allow less secure apps' in gmail. Login in your gmail account and visit "https://myaccount.google.com/lesssecureapps" and enable the 'Allow less secure apps'
 
-
+2. Now create a file mailer.js where we will write code to send emails.
 - In mailer.js, include nodemailer.
 ```
 // include nodemailer
 const nodemailer = require('nodemailer');
 ```
 
-- declare variables
+3. declare variables
    - fromMail: sender email address
    - toEmail: recipent email address
    - subject: email subject line
    - text: email body text
 ```
 // declare vars,
-let fromMail = 'ghanshyamnetcore@gmail.com';
-let toMail = 'gnbaviskar2@gmail.com';
-let subject = 'An email using nodejs app';
-let text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." 
+let fromMail = 'Enter sender email address';
+let toMail = 'Enter recipient email address to which email will be sent';
+let subject = 'Enter subject line here';
+let text = "Enter email content." 
 ```
 
 
-- Define a transporter object. Make sure to replace account_password with your gmail password. 
+4. Define a transporter object. Make sure to replace account_password with your gmail password. 
 ```
 const transporter = nodemailer.createTransport({
     service: 'gmail',
