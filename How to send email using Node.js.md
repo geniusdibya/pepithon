@@ -72,12 +72,12 @@ This will create package.json file in our project folder.
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "author name",
-  "license": "ISC",
-  "dependencies": {
-    "nodemailer": "^6.3.0"
-  }
+  "license": "ISC"
 }
-
+```
+5. Execute following npm command to install nodemailer in project. This will also add entry to package.json file in dependency array.
+```
+npm install --save nodemailer
 ```
 ### Execution
 
