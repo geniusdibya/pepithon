@@ -1,6 +1,6 @@
 # How to send email using Node.js?
 
-Nodejs is a server-side javascript runtime environment built on chrome v8 engine. It allows us to use javascript on server side.Currently Nodejs 10.16.3 stable version available.
+Nodejs is a server-side javascript runtime environment built on chrome v8 engine. It allows us to use javascript on server side. Currently Nodejs 10.16.3 stable version available.
 
 Nodejs is cross-platform. It is available for Windows, linux and Mac. I will be using Windows 10 machine for this tutotial.
 
@@ -18,7 +18,7 @@ Nodejs is cross-platform. It is available for Windows, linux and Mac. I will be 
 
 ![Imgur](https://i.imgur.com/m60WFNb.png)
 
-2. Double click on the msi file to start the installer, then click 'Run'. Like any other installation on windows, we will click next buttons several times  
+2. Double click on the msi file to start the installer, then click 'Run'. Like any other installation on windows, we will click next button several times  
 
 ![accept terms](https://i.imgur.com/RfVrQWC.png)
 
@@ -43,12 +43,24 @@ console.log(message)
 #### Installation Nodemailer module:
 - Nodejs comes with NPM. NPM(Node package manager) is the default package manager for Nodejs. Nodejs does not include any preinstalled module or library to send emails. We have to install a third-party module like NodeMailer or AlphaMail using NPM.
 
-- We can install nodemailer globally, to use it in any nodejs project using following npm command.
+![Powershell window](https://i.imgur.com/pI7Hh3J.png)
+- To begin with, our project to send an email, let's create a folder named send_emails, press shift and right-click in the folder. You should have an option 'Open PowerShell Window Here' click on this option. Windows PowerShell will appear.
+
+- Incase you dont find the option to open powershell from this folder, just copy the absolute path of the folder, open powershell from windows start menu and change directory in powershell
+
+![Imgur](https://i.imgur.com/VKzJZd9.png)
+
+- Create package.json file to install nodemailer from NPM. In powershell window, type following command
 
 ```
-npm install -g nodemailer
+npm init
 ```
+- In package.json file, we have to:
+  - Add a description in prompt
+  - Add entry point  file: mailer.js.
+  - Add author name.
 
+Type 'yes' to proceed with changes.
 ### Execution
 
 ![Imgur](https://i.imgur.com/foo8BlX.png)
