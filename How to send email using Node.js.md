@@ -40,17 +40,17 @@ Nodejs is cross-platform. It is available for Windows, linux and Mac. I will be 
 var message = `Hello world`
 console.log(message)
 ```
-#### Installation Nodemailer module:
-- Nodejs comes with NPM. NPM(Node package manager) is the default package manager for Nodejs. Nodejs does not include any preinstalled module or library to send emails. We have to install a third-party module like NodeMailer or AlphaMail using NPM.
+#### Nodemailer module Installation :
+-. Nodejs comes with NPM. NPM(Node package manager) is the default package manager for Nodejs. Nodejs does not include any preinstalled module or library to send emails. We have to install a third-party modules like NodeMailer or AlphaMail using NPM.
 
 ![Powershell window](https://i.imgur.com/pI7Hh3J.png)
-- To begin with, our project to send an email, let's create a folder named send_emails, press shift and right-click in the folder. You should have an option 'Open PowerShell Window Here' click on this option. Windows PowerShell will appear.
+1. To begin with, our project to send an email, let's create a folder named send_emails, press shift and right-click in the folder. You should have an option 'Open PowerShell Window Here' click on this option. Windows PowerShell will appear.
 
-- Incase you dont find the option to open powershell from this folder, just copy the absolute path of the folder, open powershell from windows start menu and change directory in powershell
+2. Incase you dont find the option to open powershell from this folder, just copy the absolute path of the folder, open powershell from windows start menu and change directory in powershell
 
 ![Imgur](https://i.imgur.com/VKzJZd9.png)
 
-- Create package.json file to install nodemailer from NPM. In powershell window, type following command
+3. Create package.json file to install nodemailer from NPM. In powershell window, type following npm command
 
 ```
 npm init
@@ -59,8 +59,26 @@ npm init
   - Add a description in prompt
   - Add entry point  file: mailer.js.
   - Add author name.
+  - Type 'yes' to proceed with changes.
 
-Type 'yes' to proceed with changes.
+This will create package.json file in our project folder.
+```
+{
+  "name": "send_emails",
+  "version": "1.0.0",
+  "description": "'A simple app to send emails from nodejs'",
+  "main": "mailer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ghanshyam",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.3.0"
+  }
+}
+
+```
 ### Execution
 
 ![Imgur](https://i.imgur.com/foo8BlX.png)
