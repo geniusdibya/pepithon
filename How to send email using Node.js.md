@@ -116,7 +116,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 ```
-- Set up message options (who sends what to whom)
+5. Set up message options (who sends what to whom)
 ```
 // email options
 let mailOptions = {
@@ -126,7 +126,7 @@ let mailOptions = {
     text: text
 };
 ```
-- Deliver the mail options to sendMail method of transport object created previously.
+6. Deliver the mail options to sendMail method of transport object created previously.
 ```
 // send email
 transporter.sendMail(mailOptions, (error, response) => {
@@ -138,7 +138,7 @@ transporter.sendMail(mailOptions, (error, response) => {
 ```
 ![Imgur](https://i.imgur.com/l8BWAog.png)
 
-- This will send the email to recipent email, you can assign multiple email addresses to toMail variable. This will send email to multiple emails.
+7. This will send the email to recipent email, you can assign multiple email addresses to toMail variable. This will send email to multiple emails.
 
 ```
 let toMail = 'gnbaviskar2@gmail.com,gnbaviskar3@gmail.com';
