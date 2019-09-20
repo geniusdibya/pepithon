@@ -152,3 +152,43 @@ let toMail = 'gnbaviskar2@gmail.com,gnbaviskar3@gmail.com';
 
 You can download the code from:
 https://github.com/ghansh22/email_using_nodejs.git
+```
+### Errors:
+{ Error: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials w11sm630141pfd.116 - gsmtp
+    at SMTPConnection._formatError (C:\Users\light\Desktop\send_emails\node_modules\nodemailer\lib\smtp-connection\index.js:781:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\light\Desktop\send_emails\node_modules\nodemailer\lib\smtp-connection\index.js:1516:34)
+    at SMTPConnection._responseActions.push.str (C:\Users\light\Desktop\send_emails\node_modules\nodemailer\lib\smtp-connection\index.js:554:26)
+    at SMTPConnection._processResponse (C:\Users\light\Desktop\send_emails\node_modules\nodemailer\lib\smtp-connection\index.js:940:20)
+    at SMTPConnection._onData (C:\Users\light\Desktop\send_emails\node_modules\nodemailer\lib\smtp-connection\index.js:746:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\light\Desktop\send_emails\node_modules\nodemailer\lib\smtp-connection\index.js:189:46)
+    at TLSSocket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at TLSSocket.Readable.push (_stream_readable.js:224:10)
+  code: 'EAUTH',
+  response:
+   '535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials w11sm630141pfd.116 - gsmtp',
+  responseCode: 535,
+  command: 'AUTH PLAIN' }
+```
+```
+{ Error: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials h186sm653916pfb.63 - gsmtp
+    at SMTPConnection._formatError (C:\Users\light\Desktop\send_emails\node_modules\nodemailer\lib\smtp-connection\index.js:781:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\light\Desktop\send_emails\node_modules\nodemailer\lib\smtp-connection\index.js:1516:34)
+    at SMTPConnection._responseActions.push.str (C:\Users\light\Desktop\send_emails\node_modules\nodemailer\lib\smtp-connection\index.js:554:26)
+    at SMTPConnection._processResponse (C:\Users\light\Desktop\send_emails\node_modules\nodemailer\lib\smtp-connection\index.js:940:20)
+    at SMTPConnection._onData (C:\Users\light\Desktop\send_emails\node_modules\nodemailer\lib\smtp-connection\index.js:746:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\light\Desktop\send_emails\node_modules\nodemailer\lib\smtp-connection\index.js:189:46)
+    at TLSSocket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at TLSSocket.Readable.push (_stream_readable.js:224:10)
+  code: 'EAUTH',
+  response:
+   '535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials h186sm653916pfb.63 - gsmtp',
+  responseCode: 535,
+  command: 'AUTH PLAIN' }
+```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We have to enable gmail service to use it in third party apps. In case we miss to do so, we may face such error. To resolve this error just login in gamil account and enable less secure apps using this link https://myaccount.google.com/lesssecureapps
