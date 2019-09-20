@@ -236,12 +236,33 @@ Error: Cannot find module 'nodemailer'
 ```
 npm install -g nodemailer
 ```
-linux/mac user do it with sudo to install the nodemailer:
+
 ```
-sudo npm install -g nodemailer
+npm WARN checkPermissions Missing write access to /usr/lib/node_modules
+/usr/lib
+└── nodemailer@6.3.0 
+
+npm ERR! Linux 3.10.0-957.10.1.el7.x86_64
+npm ERR! argv "/usr/bin/node" "/usr/bin/npm" "install" "-g" "nodemailer"
+npm ERR! node v6.16.0
+npm ERR! npm  v3.10.10
+npm ERR! path /usr/lib/node_modules
+npm ERR! code EACCES
+npm ERR! errno -13
+npm ERR! syscall access
+
+npm ERR! Error: EACCES: permission denied, access '/usr/lib/node_modules'
+npm ERR!     at Error (native)
+npm ERR!  { Error: EACCES: permission denied, access '/usr/lib/node_modules'
+npm ERR!     at Error (native)
+npm ERR!   errno: -13,
+npm ERR!   code: 'EACCES',
+npm ERR!   syscall: 'access',
+npm ERR!   path: '/usr/lib/node_modules' }
+npm ERR! 
+npm ERR! Please try running this command again as root/Administrator.
 ```
 - If you are trying to install nodemailer globally using npm, you will get this error. Use sudo with install command to resolve this.
-
 ```
 sudo npm install -g nodemailer
 ```
