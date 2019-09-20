@@ -71,7 +71,7 @@ This will create package.json file in our project folder.
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "ghanshyam",
+  "author": "author name",
   "license": "ISC",
   "dependencies": {
     "nodemailer": "^6.3.0"
@@ -136,13 +136,19 @@ transporter.sendMail(mailOptions, (error, response) => {
     console.log(response)
 });
 ```
-![Imgur](https://i.imgur.com/l8BWAog.png)
 
+![Imgur](https://i.imgur.com/cGDwK1f.png)
+```
+node mailer.js
+```
 7. This will send the email to recipent email, you can assign multiple email addresses to toMail variable. This will send email to multiple emails.
 
 ```
 let toMail = 'gnbaviskar2@gmail.com,gnbaviskar3@gmail.com';
 ```
+
+![Imgur](https://i.imgur.com/l8BWAog.png)
+
 
 You can download the code from:
 https://github.com/ghansh22/email_using_nodejs.git
