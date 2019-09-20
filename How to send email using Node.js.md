@@ -29,7 +29,7 @@ Nodejs is cross-platform. It is available for Windows, linux and Mac. I will be 
 4. Select default location for nodejs (remember this location to verify the installation)
 
 ![finish installation](https://i.imgur.com/Guh7hvv.png)
-- Click on install and finish the installation.
+5. Click on install and finish the installation.
 
 ##### Verify nodejs installation working properly:
 - Open nodejs installation directory, which we had selected at the time of installation. In our case it is C:\Program Files\nodejs. If you don't remember the installation directory, just go to c drive and find Program Files. In this directory, you should find nodejs directory, as it is the default location. Here we will find node js application, just double click it, A command prompt will appear. 
@@ -55,7 +55,7 @@ console.log(message)
 ```
 npm init
 ```
-- In package.json file, we have to:
+4. In package.json file, we have to:
   - Add a description in prompt
   - Add entry point  file: mailer.js.
   - Add author name.
@@ -86,13 +86,13 @@ This will create package.json file in our project folder.
 1. To send email using gmail as a service from third party apps like our nodejs app, we have to enable 'Allow less secure apps' in gmail. Login in your gmail account and visit "https://myaccount.google.com/lesssecureapps" and enable the 'Allow less secure apps'
 
 2. Now create a file mailer.js where we will write code to send emails.
-- In mailer.js, include nodemailer.
+3. In mailer.js, include nodemailer.
 ```
 // include nodemailer
 const nodemailer = require('nodemailer');
 ```
 
-3. declare variables
+4. declare variables
    - fromMail: sender email address
    - toEmail: recipent email address
    - subject: email subject line
@@ -116,7 +116,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 ```
-5. Set up message options (who sends what to whom)
+6. Set up message options (who sends what to whom)
 ```
 // email options
 let mailOptions = {
@@ -126,7 +126,7 @@ let mailOptions = {
     text: text
 };
 ```
-6. Deliver the mail options to sendMail method of transport object created previously.
+7. Deliver the mail options to sendMail method of transport object created previously.
 ```
 // send email
 transporter.sendMail(mailOptions, (error, response) => {
@@ -141,7 +141,7 @@ transporter.sendMail(mailOptions, (error, response) => {
 ```
 node mailer.js
 ```
-7. This will send the email to recipent email, you can assign multiple email addresses to toMail variable. This will send email to multiple emails.
+8. This will send the email to recipent email, you can assign multiple email addresses to toMail variable. This will send email to multiple emails.
 
 ```
 let toMail = 'gnbaviskar2@gmail.com,gnbaviskar3@gmail.com';
