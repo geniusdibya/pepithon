@@ -194,12 +194,12 @@ Error: Cannot find module 'nodemailer'
     at Function.Module._load (internal/modules/cjs/loader.js:585:3)
 ```
 
-- If your nodemailer module installation failed, you may face this error. TO resolve this error go to installation steps, and install nodemailer.
+- If your nodemailer module installation failed, you may face this error. To resolve this error go to installation steps, and install nodemailer.
 - You can also install nodemailer globally using following command
 ```
 npm install -g nodemailer
 ```
-linux/mac user type following command:
+linux/mac user do it with sudo to install the nodemailer:
 ```
 sudo npm install -g nodemailer
 ```
