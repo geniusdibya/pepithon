@@ -7,7 +7,7 @@ Nodejs is cross-platform. It is available for Windows, linux and Mac. I will be 
 ## Prerequisites
  - A working windows 10 machine.
  - Nodejs libraries installed.
- - Nodemailer NPM module installed globally.
+ - Nodemailer NPM module installed.
   
 ### Installation
 (If you have nodejs and nodemailer module installed, you can skip to execution step) 
@@ -83,7 +83,7 @@ This will create package.json file in our project folder.
 
 ![Imgur](https://i.imgur.com/foo8BlX.png)
 
-1. To send email using gmail as service from third party apps like our nodejs app, we have to enable 'Allow less secure apps' in gmail. Login in your gmail account and visit "https://myaccount.google.com/lesssecureapps" and enable the 'Allow less secure apps'
+1. To send email using gmail as a service from third party apps like our nodejs app, we have to enable 'Allow less secure apps' in gmail. Login in your gmail account and visit "https://myaccount.google.com/lesssecureapps" and enable the 'Allow less secure apps'
 
 2. Now create a file mailer.js where we will write code to send emails.
 - In mailer.js, include nodemailer.
@@ -145,6 +145,4 @@ let toMail = 'gnbaviskar2@gmail.com,gnbaviskar3@gmail.com';
 ```
 
 You can download the code from:
-```
 https://github.com/ghansh22/email_using_nodejs.git
-```
